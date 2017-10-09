@@ -8,7 +8,10 @@ function get_todos() {
 }
  
 function add() {
-    var task = document.getElementById('task').value;
+    var task = document.getElementById('task').value; 
+    if (task === '') {
+        alert("Please input a task")
+    } else {
  
     var todos = get_todos();
     todos.push(task);
@@ -19,7 +22,7 @@ function add() {
     var clear = document.getElementById("task").value = "";
  
     return false;
-}
+}}
  
 function remove() {
     var id = this.getAttribute('id');
